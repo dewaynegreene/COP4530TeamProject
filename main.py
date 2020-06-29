@@ -15,11 +15,14 @@ if testSize == '':
 else:
     testSize = int(testSize)
     testQueue = Dynamic_queue(testSize)
+
 print("The initial capacity is " + str(testQueue.initialCapacity))
 print("The current capacity is " + str(testQueue.currCapacity))
 
 # Tests the destructor
+# Destructor is called at the end of the program
 print("\nDestructor")
+
 
 # Tests the copy constructor
 print("\nCopy Constructor")
@@ -39,7 +42,4 @@ print("The equal function ")
 print("The enqueue function")
 print("The dequeue function ")
 print("The clear function")
-
-
-
 
