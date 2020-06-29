@@ -20,6 +20,7 @@ class Dynamic_queue:
 
     # Destructor
     def __del__(self):
+        print("Destructor Called")
         return
 
     # Copy Constructor - creates a new instance of queue ***
@@ -32,7 +33,11 @@ class Dynamic_queue:
     # Accessors - access the queue, but doesn't modify it
     # Returns the object at the head of the queue
     def head(self):
-        return
+        if len(self.elements) == 0:
+            return "empty"
+        else:
+            return self.elements[0]
+
 
     # Returns the number of objects currently stored in the queue
     def size(self):
@@ -40,7 +45,10 @@ class Dynamic_queue:
 
     # Returns true if the queue is empty. Returns false otherwise
     def empty(self):
-        return
+        if len(self.elements) == 0:
+            return True
+        else:
+            return False
 
     # Returns the current capacity of the queue.
     def capacity(self):
