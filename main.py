@@ -39,6 +39,12 @@ print("The capacity of the queue is " + str(testQueue.capacity()))
 # Tests the Mutators
 print("\nMUTATORS")
 print("SWAP")
+print("The Original List: " + str(testQueue.elements))
+doSwap = input("Swap all member variables of this queue? (Y/N): ")
+if doSwap == "Y" or doSwap == "y":
+    newVar = input("Enter new variable to replace all variables with: ")
+    newVar = int(newVar)
+    print("New queue after swap: " + str(testQueue.swap(newVar)))
 
 print("\nEQUAL OPERATOR")
 copy.enqueue(6)
@@ -78,6 +84,9 @@ print("The current capacity is " + str(testQueue.currCapacity))
 
 
 print("\nCLEAR")
+print("Clearing testQueue's elements: " + str(testQueue.clear()))
+print("The initial capacity is " + str(testQueue.initialCapacity))
+print("The current capacity is " + str(testQueue.currCapacity))
 
 # Starts to create actual main
 # Needs to demonstrate things cna be removed from queue, added to queue, and the size & capacity will dynamically change
