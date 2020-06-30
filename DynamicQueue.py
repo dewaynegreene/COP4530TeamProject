@@ -60,7 +60,10 @@ class Dynamic_queue:
     # Mutators - Changes values in the queue
     # will swap all the member variables of this queue with those of the argument
     def swap(self, swapper):
-        return
+        for x in self.elements:
+            self.elements.pop(0)
+            self.elements.append(swapper)
+        return self.elements
 
     # Swaps member variables with the copy on the right side of the operator
     def __eq__(self, copy):
@@ -95,4 +98,5 @@ class Dynamic_queue:
 
     # Resets member variables to empty queue. The array is resized to the initial capacity
     def clear(self):
-        return
+        self.elements.clear()
+        return self.elements
