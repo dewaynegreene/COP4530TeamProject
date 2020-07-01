@@ -90,12 +90,29 @@ print("The current capacity is " + str(testQueue.currCapacity))
 
 # Starts to create actual main
 # Needs to demonstrate things cna be removed from queue, added to queue, and the size & capacity will dynamically change
+# ADDING TO QUEUE
+print("\nADDING VAR TO QUEUE")
+userAdd = input("Add variable to Queue? (Y/N): ")
+if userAdd == "Y" or userAdd == "y":
+    while userAdd != 'e':  #TODO: Choose a better constraint for while loop??
+        userAdd = input("Enter variable to add or 'e' to exit: ")
+        if userAdd != 'e':
+            userAdd = int(userAdd)
+            testQueue.elements.append(userAdd)
+    print("Updated queue: " + str(testQueue.elements))
+
+# DELETING FROM QUEUE
+print("\nREMOVING VAR FROM QUEUE")
+userDel = input("Remove variable from Queue? (Y/N): ")
+if userDel == "Y" or userDel == "y":
+    userDel = input("Enter variable to delete: ")
+    #Delete a specific variable? Delete from front or end? 
+    
 
 
 # Tests the destructor
 # Destructor is called at the end of the program
 print("\nDestructor")
-
 
 
 
