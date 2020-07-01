@@ -7,10 +7,10 @@ Main Info
 ---------
 Currently, the main function is being used for debugging. The actual function is still to be implemented. 
 The main should demonstrate...
-- things can be added
 - things can be removed 
-- the capacity changes dynamically as the items are added and removed
-- the ability to swap variables 
+- the capacity changes dynamically as the items are added and removed (implemented in debugging stage but needs better demonstration)
+
+- the ability to swap variables (implemented in debugging stage but needs better demonstration)
 
 Changes Made To Original Specs
 -----------------------------
