@@ -98,7 +98,7 @@ if userAdd == "Y" or userAdd == "y":
         userAdd = input("Enter variable to add or 'e' to exit: ")
         if userAdd != 'e':
             userAdd = int(userAdd)
-            testQueue.elements.append(userAdd)
+            testQueue.enqueue(userAdd)
     print("Updated queue: " + str(testQueue.elements))
 
 # DELETING FROM QUEUE
@@ -106,7 +106,8 @@ print("\nREMOVING VAR FROM QUEUE")
 userDel = input("Remove variable from Queue? (Y/N): ")
 if userDel == "Y" or userDel == "y":
     userDel = input("Enter variable to delete: ")
-    #Delete a specific variable? Delete from front or end? 
+    #Delete a specific variable? Delete from from front or end? - Use dequeue function to allow for size to dynamically change
+    testQueue.dequeue(userDel)
     
 
 
