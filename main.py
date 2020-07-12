@@ -82,6 +82,22 @@ testQueue.dequeue()
 print("After dequeue2, testQueue's elements:" + str(testQueue.elements))
 print("The current capacity is " + str(testQueue.currCapacity))
 
+# ADDING/DELETING TO OR FROM QUEUE
+print("\nADDING/DELETING VAR TO QUEUE")
+userAdd = input("Add or delete variable to Queue? (Y/N): ")
+if userAdd == "Y" or userAdd == "y":
+    userChoice = input("Enter 'A' for adding or 'D' for deleting a variable (A/D): " )
+    if userChoice == "A" or userChoice == "a":
+        #Adding preset value to the queue 3
+        testQueue.elements.append(3)
+        print("Variable 3 added to queue.")
+        print("Updated queue: ", testQueue.elements)
+    elif userChoice == "D" or userChoice == "d":
+        #Dequeing from front
+        testQueue.dequeue()
+        print("Front element deleted from queue.")
+        print("Updated queue: ", testQueue.elements)
+
 
 print("\nCLEAR")
 print("Clearing testQueue's elements: " + str(testQueue.clear()))
@@ -90,26 +106,6 @@ print("The current capacity is " + str(testQueue.currCapacity))
 
 # Starts to create actual main
 # Needs to demonstrate things cna be removed from queue, added to queue, and the size & capacity will dynamically change
-# ADDING TO QUEUE
-print("\nADDING VAR TO QUEUE")
-userAdd = input("Add variable to Queue? (Y/N): ")
-if userAdd == "Y" or userAdd == "y":
-    while userAdd != 'e':  #TODO: Choose a better constraint for while loop??
-        userAdd = input("Enter variable to add or 'e' to exit: ")
-        if userAdd != 'e':
-            userAdd = int(userAdd)
-            testQueue.enqueue(userAdd)
-    print("Updated queue: " + str(testQueue.elements))
-
-# DELETING FROM QUEUE
-print("\nREMOVING VAR FROM QUEUE")
-userDel = input("Remove variable from Queue? (Y/N): ")
-if userDel == "Y" or userDel == "y":
-    userDel = input("Enter variable to delete: ")
-    #Delete a specific variable? Delete from from front or end? - Use dequeue function to allow for size to dynamically change
-    testQueue.dequeue(userDel)
-    
-
 
 # Tests the destructor
 # Destructor is called at the end of the program
