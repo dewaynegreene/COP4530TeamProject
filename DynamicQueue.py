@@ -9,7 +9,7 @@ class Dynamic_queue:
     # Constructor
     def __init__(self, value=10):
         # Initializes attributes
-        self.elements = []
+        self.elements = []*value
         # self.iHead = 0
         # self.iTail = 0
         # self.entryCount = 0
