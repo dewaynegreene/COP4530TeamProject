@@ -18,8 +18,6 @@ else:
 
 print("The initial capacity is " + str(testQueue.initialCapacity))
 print("The current capacity is " + str(testQueue.currCapacity))
-testQueue.elements.append(5);
-testQueue.elements.append(10);
 
 # Tests the copy constructor
 print("\nCOPY CONSTRUCTOR")
@@ -67,7 +65,7 @@ print("testQueue's elements:" + str(testQueue.elements))
 print("The initial capacity is " + str(testQueue.initialCapacity))
 print("The current capacity is " + str(testQueue.currCapacity))
 testQueue.enqueue(5)
-print("After dequeue, testQueue's elements:" + str(testQueue.elements))
+print("After enqueue, testQueue's elements:" + str(testQueue.elements))
 print("The current capacity is " + str(testQueue.currCapacity))
 
 print("\nDEQUEUE ")
