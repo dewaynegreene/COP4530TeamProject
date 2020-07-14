@@ -21,8 +21,6 @@ else:
 
 print("The initial capacity is " + str(testQueue.initialCapacity))
 print("The current capacity is " + str(testQueue.currCapacity))
-testQueue.elements.append(5);
-testQueue.elements.append(10);
 
 # Tests the copy constructor
 print("\nCOPY CONSTRUCTOR")
@@ -72,23 +70,29 @@ print("The copy's initial capacity is " + str(copy.initialCapacity))
 print("The copy's current capacity is " + str(copy.currCapacity))
 
 print("\nENQUEUE")
-print("testQueue's elements:" + str(testQueue.elements))
-print("The initial capacity is " + str(testQueue.initialCapacity))
-print("The current capacity is " + str(testQueue.currCapacity))
-testQueue.enqueue(5)
-print("After dequeue, testQueue's elements:" + str(testQueue.elements))
-print("The current capacity is " + str(testQueue.currCapacity))
+i = 0
+while i < 5:
+    print("testQueue's elements:" + str(testQueue.elements))
+    print("The initial capacity is " + str(testQueue.initialCapacity))
+    print("The current capacity is " + str(testQueue.currCapacity))
+    testQueue.enqueue(5)
+    print("After enqueue, testQueue's elements:" + str(testQueue.elements))
+    print("The current capacity is " + str(testQueue.currCapacity) + "\n")
+    i += 1
 
 print("\nDEQUEUE ")
-print("testQueue's elements:" + str(testQueue.elements))
-print("The initial capacity is " + str(testQueue.initialCapacity))
-print("The current capacity is " + str(testQueue.currCapacity))
-testQueue.dequeue()
-print("After dequeue1, testQueue's elements:" + str(testQueue.elements))
-print("The current capacity is " + str(testQueue.currCapacity))
+i = 0
+while i < 4:
+    print("testQueue's elements:" + str(testQueue.elements))
+    print("The initial capacity is " + str(testQueue.initialCapacity))
+    print("The current capacity is " + str(testQueue.currCapacity))
+    testQueue.dequeue()
+    print("After dequeue, testQueue's elements:" + str(testQueue.elements))
+    print("The current capacity is " + str(testQueue.currCapacity) + "\n")
+    i +=1
 
 testQueue.dequeue()
-print("After dequeue2, testQueue's elements:" + str(testQueue.elements))
+print("After dequeue, testQueue's elements:" + str(testQueue.elements))
 print("The current capacity is " + str(testQueue.currCapacity))
 
 # ADDING/DELETING TO OR FROM QUEUE
@@ -101,12 +105,12 @@ if userAdd == "Y" or userAdd == "y":
     while (userChoice != "A" and userChoice != "a" and userChoice != "D" and userChoice != "d"):
         userChoice = input("Invalid input. Please re-enter 'A' for adding or 'D' for deleting a variable: ")
     if userChoice == "A" or userChoice == "a":
-        #Adding preset value to the queue 3
-        testQueue.elements.append(3)
+        # Adding preset value to the queue 3
+        testQueue.enqueue(3)
         print("Variable 3 added to queue.")
         print("Updated queue: ", testQueue.elements)
     elif userChoice == "D" or userChoice == "d":
-        #Dequeing from front
+        # Dequeuing from front
         testQueue.dequeue()
         print("Front element deleted from queue.")
         print("Updated queue: ", testQueue.elements)
@@ -123,5 +127,3 @@ print("The current capacity is " + str(testQueue.currCapacity))
 # Tests the destructor
 # Destructor is called at the end of the program
 print("\nDestructor")
-
-
