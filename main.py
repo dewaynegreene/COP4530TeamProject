@@ -47,6 +47,9 @@ while(doSwap != "Y" and doSwap != "y" and doSwap != "n" and doSwap != "N"):
 if doSwap == "Y" or doSwap == "y" or doSwap == "n" or doSwap == "N":
     if(doSwap == "Y" or doSwap == "y"):
         newVar = input("Enter new variable to replace all variables with: ")
+        """
+        Should have input validation here too
+        """
         newVar = int(newVar)
         print("New queue after swap: " + str(testQueue.swap(newVar)))
 
