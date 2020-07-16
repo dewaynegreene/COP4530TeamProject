@@ -49,7 +49,10 @@ class Dynamic_queue:
         and return count. Ex: If list is size 10 and holds 2 elements,
         then it will return wrong count of 10 elements.
         """
-        return len(self.elements)
+        count = 0
+        for x in self.elements:
+            count += 1
+        return count
 
     # Returns true if the queue is empty. Returns false otherwise
     def empty(self):
@@ -58,10 +61,13 @@ class Dynamic_queue:
         and return count. Ex: If list is size 10 and holds 2 elements,
         then it will return wrong count of 10 elements.
         """
-        if len(self.elements) == 0:
-            return True
-        else:
+        count = 0
+        for x in self.elements:
+            count += 1
+        if count > 0:
             return False
+        else:
+            return True
 
     # Returns the current capacity of the queue.
     def capacity(self):
@@ -118,4 +124,6 @@ class Dynamic_queue:
         Should clear list and then create new list with initial capacity as its size.
         """
         self.elements.clear()
+        for i in range(self.initialCapacity):
+            self.elements.append(None)
         return self.elements
