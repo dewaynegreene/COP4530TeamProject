@@ -63,7 +63,8 @@ class Dynamic_queue:
                 """
         count = 0
         for x in self.elements:
-            count += 1
+            if count is not None:
+                count += 1
         if count > 0:
             return False
         else:
